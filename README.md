@@ -73,18 +73,5 @@ enum4linux -A IP-Address
 ```bash
 
 ```
-```bash
 
-``````bash
-
-```
-```bash
-
-``````bash
-
-```
-```bash
-
-
-```
 
