@@ -45,6 +45,46 @@ python3 ntmlrelayx.py -tf /path/to/target_host_nmap_above -smb3supprt
 crackmapexec smb "10.0.9.0/24" -u "FirstName.LastName" -p /path/to/password.txt
 ```
 
+### Active Directory
+-Nmap. 
+```bash
+nmap -Pn -sV -sC -oN top IP-Address
+```
+- Look for ports such as :
+```bash
+53 → DNS
+139,135,445 → RPC or SMB
+3389 → RDP or domain controller
+88 → kerberos
+389 → Ldap
+636 → ldaps
+445 → SMB
+```
+enum4linux
+```bash
+enum4linux -A IP-Address
+```
+ #### Abusing Kerberos.
+```bash
 
+```
+```bash
 
+``````bash
+
+```
+```bash
+
+``````bash
+
+```
+```bash
+
+``````bash
+
+``````bash
+
+``````bash
+
+```
 
